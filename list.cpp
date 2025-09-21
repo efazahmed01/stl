@@ -50,8 +50,8 @@ int main()
     // তাই নিজস্ব sort member function ব্যবহার করতে হবে
     l.sort();
 
-    // lower_bound, upper_bound কাজ করে না কারণ random access iterator লাগে
-    // তাই binary search STL algorithms list এ ব্যবহার করা যায় না
+    // **sort করার পরে unique() চালানো হয় যাতে সব duplicates মুছে যায়**
+    l.unique();
 
     // count occurrences of 5
     int cnt = count(l.begin(), l.end(), 5);
